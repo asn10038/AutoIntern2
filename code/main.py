@@ -18,5 +18,9 @@ app = Flask(__name__)
 def index():
     return "Hello, World (lets see how long a change takes III)!"
 
+@app.route('/users')
+def users_index():
+    return "Hello Users this is a unit test that works thanks"
+
 if __name__ == '__main__':
     app.run(debug=True)

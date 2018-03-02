@@ -31,5 +31,10 @@ class MainTest(unittest.TestCase):
         print(rv.data)
         assert("hello" in rv.data.lower())
 
+    def test_hello_users(self):
+        rv = self.app.get('/users')
+        print(rv.data)
+        assert("users" in rv.data.lower())
+
 if __name__ == '__main__':
     unittest.main()
